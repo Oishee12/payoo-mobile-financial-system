@@ -9,6 +9,7 @@ document.getElementById('login-btn').addEventListener('click', function(){
     // console.log(pin);
     if(number === '01234567890' && pin === '1234'){
         alert('Login Successfully.');
+        window.location.assign('/home.html');
     }
     else{
             alert("Login Failed. Your pin is 1234");
