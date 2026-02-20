@@ -11,7 +11,7 @@ document.getElementById('login-btn').addEventListener('click', function(){
         alert('Login Successfully.');
     }
     else{
-            alert("Login Failed. Your number is 01234567890 and pin is 1234");
+            alert("Login Failed. Your pin is 1234");
             return;
         }
 })
