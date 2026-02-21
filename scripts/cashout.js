@@ -21,8 +21,20 @@ document.getElementById("cashout-btn").addEventListener('click', function(){
     const cashoutPinInput = document.getElementById('cashout-pin');
     const pin = cashoutPinInput.value;
     if(pin === '1234'){
-        alert("Cash Out Successfull");
+        alert(`Cash Out Successfully from 
+            ${agentNumber} at ${new Date().toLocaleString()}`);
         balanceElement.innerText = newBalance;
+
+        const history = document.getElementById('transactions');
+        const div = document.createElement('div');
+        div.innerHTML = `
+
+        <div class="w-11/12 mx-auto py-5">
+            Cash Out Successfully from 
+            ${agentNumber} at ${new Date().toLocaleString()}
+        </div>`;
+           
+            history.append(div);
     }
     else{
         alert("Invalid Pin");

@@ -18,8 +18,19 @@ document.getElementById('add-money-btn').addEventListener('click', function () {
     const pin = getValueFromInput('add-money-pin');
     if(pin === '1234'){
         alert(`Add Money Successfully 
-            from ${addMoneyBank} at ${new Date()}`);
+            from ${addMoneyBank} at ${new Date().toLocaleString()}`);
         setBalance(newBalance);
+
+        const history = document.getElementById('transactions');
+        const div = document.createElement('div');
+        div.innerHTML = `
+
+        <div class="w-11/12 mx-auto py-5">
+             Add Money Successfully from
+             ${addMoneyBank} at ${new Date().toLocaleString()}
+        </div>`;
+           
+            history.append(div);
     }
     else{
         alert("Invalid Pin");
