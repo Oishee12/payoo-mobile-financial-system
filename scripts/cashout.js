@@ -37,7 +37,7 @@ document.getElementById("cashout-btn").addEventListener('click', function(){
             history.append(div);
     }
     else{
-        alert("Invalid Pin");
+        alert("Invalid Pin. Your pin is 1234");
         return;
     }
 })

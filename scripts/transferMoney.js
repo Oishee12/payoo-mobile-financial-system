@@ -25,7 +25,7 @@ document.getElementById('send-money-btn')
                 history.appendChild(div);
         }
         else{
-            alert('Invalid pin.');
+            alert('Invalid pin. Your pin is 1234');
             return;
         }
 
