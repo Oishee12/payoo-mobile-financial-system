@@ -11,10 +11,24 @@ document.getElementById('send-money-btn')
         }
         const pin = getValueFromInput('transfer-pin');
         if(pin === '1234'){
-            alert('Send money successfully.');
+            alert(`Send money successfully
+                 from the account number ${userAccountNumber} 
+                at ${new Date().toLocaleString()}`);
+                const history = document.getElementById('transactions');
+                const div = document.createElement('div');
+                div.innerHTML = `
+                <div class="w-11/12 mx-auto pt-5">
+            Send money successfully
+                 from the account number ${userAccountNumber} 
+                at ${new Date().toLocaleString()}
+        </div>`
+                history.appendChild(div);
         }
         else{
             alert('Invalid pin.');
+            return;
         }
-        console.log(pin, typeof(pin));
+
+        const newBalance = getBalance() - transferAmount;
+        setBalance(newBalance);
     });
