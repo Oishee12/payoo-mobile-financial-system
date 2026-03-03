@@ -15,6 +15,7 @@ function setBalance(value){
     balanceElement.innerText = value;
 }
 
+// buttons functionality 
 function showOnly(id){
     const pages = ['add-money', 'cash-out', 'transactions', 'transfer-money'];
     for(const sectionId of pages){
